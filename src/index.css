@@ -5,9 +5,245 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.rock {
+
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+}
+
+.ghost {
+
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.electric {
+
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+
+.bug {
+
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+}
+
+.poison {
+
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+}
+
+.normal {
+
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+
+.fairy {
+
+  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+.fire {
+
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.grass {
+
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.water {
+
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+
+.ground {
+
+  background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+
+}
+
+.header {
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  padding: 10px 20px;
+  color: white;
+  text-shadow: 0 0 20px #66a6ff;
+}
+
+.header h1::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 4px;
+  width: 0px;
+  background-color: greenyellow;
+  animation: iii 2s infinite;
+  text-shadow: 0 0 10px black;
+}
+
+@keyframes iii {
+
+  0%,
+  100% {
+    width: 1%;
+  }
+
+  50% {
+    width: 70px;
+  }
+}
+
+.all {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.poke {
+  padding: 50px 0;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke img {
+  min-height: 150px;
+}
+
+.name,
+.id {
+  font-size: 20px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+  font-weight: bold;
+}
+
+.btnShow {
+  background-color: royalblue;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0 solid;
+  font-size: 17px;
+  transition: 0.2s linear;
+  height: 50px;
+  width: 200px;
+  font-weight: bold;
+}
+
+.btnShow:focus,
+.btnShow:hover {
+  color: royalblue;
+  background-color: white;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more button {
+  background-image: linear-gradient(to right, white 0%, red 100%);
+  color: white;
+  text-shadow: 0 0 10px black;
+  padding: 20px 40px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 0 solid;
+  font-size: 20px;
+  transition: 0.2s linear;
+  font-weight: bold;
+  transition: 0.4s linear;
+}
+
+.more button:hover,
+.more button:active {
+  background-image: linear-gradient(to bottom, red 0%, white 100%);
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+.desc {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ppp 0.4s;
+}
+
+@keyframes ppp {
+  0% {
+    opacity: 0;
+    top: 60%;
+  }
+
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.pokeDesc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 50px;
+}
+
+.pokeDesc img {
+  height: 200px;
+  width: 200px;
+  margin: 20px 0;
+}
+
+.descName {
+  margin: 0px;
+  line-height: 2rem;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+  font-weight: bold;
+}
+
+.highlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  animation: lll 0.4s linear;
+}
+
+@keyframes lll {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
 }
