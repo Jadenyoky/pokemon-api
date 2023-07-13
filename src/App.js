@@ -19,6 +19,8 @@ const App = () => {
       });
     }
 
+    console.log('asdad')
+
     createPoke(apiJ.results);
 
     console.log(pokemons);
